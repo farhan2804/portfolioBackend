@@ -5,13 +5,7 @@ const cors = require("cors");
 require("./connection");
 const Portfolioviewers = require("./db");
 
-app.use(
-  cors({
-    origin: "http://localhost:5173/", // Replace with your frontend domain
-    credentials: true, // Allow cookies for authentication (if applicable)
-  })
-);
-
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
