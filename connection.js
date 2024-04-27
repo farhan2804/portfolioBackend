@@ -1,9 +1,9 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
-
+const mongo = process.env.MONGO;
 const connectToDatabase = async () => {
   try {
-    const connectionString = "mongodb://localhost:27017/portfoliodata"; // Local connection string
-    await mongoose.connect(connectionString);
+    await mongoose.connect(mongo);
     console.log("Connection successful!");
   } catch (error) {
     console.error("Connection error:", error);

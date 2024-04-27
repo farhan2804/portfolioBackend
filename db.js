@@ -21,7 +21,7 @@ const portfolioSchema = new mongoose.Schema({
 });
 //now creating a new collection
 const Portfolioviewers = new mongoose.model(
-  "Portfolioviewers",
+  "portfolioviewers",
   portfolioSchema
 );
 module.exports = Portfolioviewers;
